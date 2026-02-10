@@ -15,7 +15,7 @@ class Tutor(models.Model):
     telefone = models.CharField(max_length=20)
     email = models.CharField(max_length=50, blank=False)
     data_de_nascimento = models.DateField()
-    cpf = models.CharField()
+    cpf = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
