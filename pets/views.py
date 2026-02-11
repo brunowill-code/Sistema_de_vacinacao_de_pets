@@ -3,7 +3,7 @@ from .models import Pets
 from .serializers import PetsSerializer
 # Create your views here.
 
-# rotas para a clinica
+# rotas para os pets
 class PetsViewSet(viewsets.ModelViewSet):
     queryset = Pets.objects.all()
     serializer_class = PetsSerializer
