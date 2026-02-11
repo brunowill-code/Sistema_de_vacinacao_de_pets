@@ -10,12 +10,16 @@ from .serializers import (
 
 # rotas para a clinica
 class ClinicaViewSet(viewsets.ModelViewSet):
-    queryset = Clinica.objects.all()
+    queryset = Clinica.objects.prefetch_related(
+        "tutores__pets__vacinacoes__vacina"
+    )
     serializer_class = ClinicaSerializer
 
 #rotas para o tutor
 class TutorViewSet(viewsets.ModelViewSet):
-    queryset = Tutor.objects.all()
+    queryset = Tutor.objects.prefetch_related(
+        "pets__vacinacoes__vacina"
+    )
     serializer_class = TutorSerializer
 
 #rotas para o profissional

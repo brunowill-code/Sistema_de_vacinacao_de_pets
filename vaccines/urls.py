@@ -8,5 +8,4 @@ router = DefaultRouter()
 router.register("vacina", VacinaViewSet, basename="vacinas")
 router.register("vacinacao", VacinacaoViewSet, basename="vacinacao")
 
-
 urlpatterns = router.urls
