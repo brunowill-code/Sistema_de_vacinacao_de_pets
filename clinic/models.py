@@ -28,8 +28,6 @@ class Profissional(models.Model):
     )
     nome = models.CharField(max_length=150)
     crmv = models.CharField(max_length=20)
-    proxima_vacina = models.CharField(max_length=150)
-    data_de_vacinacao = models.DateField()
 
     def __str__(self):
         return self.nome
