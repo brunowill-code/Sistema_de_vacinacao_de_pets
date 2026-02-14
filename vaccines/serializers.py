@@ -8,7 +8,7 @@ from clinic.models import Profissional
 class ProfissionalNestedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profissional
-        fields = ["id", "nome"]
+        fields = ["id", "nome", "crmv"]
 
 class VacinaSerializer(serializers.ModelSerializer):
     class Meta:
