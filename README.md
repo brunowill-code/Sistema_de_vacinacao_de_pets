@@ -12,7 +12,7 @@ O sistema foi desenvolvido com foco em **facilidade de uso, modularidade e escal
 ![Diagrama MER do Sistema](assets/diagrama_mer.png)
 
 O **Diagrama MER (Modelo Entidade-Relacionamento)** mostra a estrutura de dados do sistema, representando todas as entidades principais e seus relacionamentos:
-
+- **Owner** → Usuário mestre responsável pela gestão da clínica. Existe uma relação de exclusividade onde cada clínica está obrigatoriamente vinculada a um owner.
 - **Clínica** → Cada clínica possui seus próprios **profissionais**,**tutores**, **pets**, **vacinas** e **vacinação**, permitindo uso multi-clínicas.  
 - **Tutor** → Representa o dono do pet, vinculado a uma clínica.  
 - **Pet** → Cada pet pertence a um tutor e pode receber diversas vacinas ao longo do tempo.  
@@ -33,6 +33,9 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 ---
 
 ## Descrição Geral das Rotas / Endpoints
+
+### Register
+- `POST /api/register/` → Ciar novo Owner
 
 ### Clínicas
 - `POST /api/clinica/` → Cria nova clínica  
