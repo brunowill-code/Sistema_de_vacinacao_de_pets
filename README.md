@@ -13,7 +13,7 @@ O sistema foi desenvolvido com foco em **facilidade de uso, modularidade e escal
 
 O **Diagrama MER (Modelo Entidade-Relacionamento)** mostra a estrutura de dados do sistema, representando todas as entidades principais e seus relacionamentos:
 
-- **Clínica** → Cada clínica possui seus próprios **profissionais**,**tutores**, **pets**, **tutores**, **vacinas** e **vacinação**, permitindo uso multi-clínicas.  
+- **Clínica** → Cada clínica possui seus próprios **profissionais**,**tutores**, **pets**, **vacinas** e **vacinação**, permitindo uso multi-clínicas.  
 - **Tutor** → Representa o dono do pet, vinculado a uma clínica.  
 - **Pet** → Cada pet pertence a um tutor e pode receber diversas vacinas ao longo do tempo.  
 - **Vacina** → Lista de vacinas disponíveis na clinica.  
@@ -24,7 +24,7 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 
 ## Tecnologias Utilizadas
 
-- **Linguagem:** Python 3.x  
+- **Linguagem:** Python 3 
 - **Framework Web:** Django (com Django REST Framework para APIs)  
 - **Banco de Dados:** SQLite  
 - **Gerenciamento de Dependências:** pip / virtualenv  
@@ -35,24 +35,24 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 ## Descrição Geral das Rotas / Endpoints
 
 ### Clínicas
-- `POST /api/clinics/` → Cria nova clínica  
-- `GET /api/clinics/<id>/` → Detalhes de uma clínica  
-- `PUT /api/clinics/<id>/` → Atualiza clínica  
-- `DELETE /api/clinics/<id>/` → Remove clínica  
+- `POST /api/clinica/` → Cria nova clínica  
+- `GET /api/clinica/<id>/` → Detalhes de uma clínica  
+- `PUT /api/clinica/<id>/` → Atualiza clínica  
+- `DELETE /api/clinica/<id>/` → Remove clínica  
 
 ### Profissionais
-- `GET /api/professionals/` → Lista profissionais  
-- `POST /api/professionals/` → Cria profissional  
-- `GET /api/professionals/<id>/` → Detalhes do profissional  
-- `PUT /api/professionals/<id>/` → Atualiza profissional  
-- `DELETE /api/professionals/<id>/` → Remove profissional  
+- `GET /api/profissionais/` → Lista profissionais  
+- `POST /api/profissionais/` → Cria profissional  
+- `GET /api/profissionais/<id>/` → Detalhes do profissional  
+- `PUT /api/profissionais/<id>/` → Atualiza profissional  
+- `DELETE /api/profissionais/<id>/` → Remove profissional  
 
 ### Tutores
-- `GET /api/tutors/` → Lista todos os tutores  
-- `POST /api/tutors/` → Cadastra novo tutor  
-- `GET /api/tutors/<id>/` → Detalhes do tutor  
-- `PUT /api/tutors/<id>/` → Atualiza tutor  
-- `DELETE /api/tutors/<id>/` → Remove tutor  
+- `GET /api/tutor/` → Lista todos os tutores  
+- `POST /api/tutor/` → Cadastra novo tutor  
+- `GET /api/tutor/<id>/` → Detalhes do tutor  
+- `PUT /api/tutor/<id>/` → Atualiza tutor  
+- `DELETE /api/tutor/<id>/` → Remove tutor  
 
 ### Pets
 - `GET /api/pets/` → Lista todos os pets  
@@ -62,15 +62,15 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 - `DELETE /api/pets/<id>/` → Remove pet  
 
 ### Vacinas
-- `GET /api/vaccines/` → Lista vacinas  
-- `POST /api/vaccines/` → Cadastra nova vacina  
-- `GET /api/vaccines/<id>/` → Detalhes da vacina  
-- `PUT /api/vaccines/<id>/` → Atualiza vacina  
-- `DELETE /api/vaccines/<id>/` → Remove vacina  
+- `GET /api/vacina/` → Lista vacinas  
+- `POST /api/vacina/` → Cadastra nova vacina  
+- `GET /api/vacina/<id>/` → Detalhes da vacina  
+- `PUT /api/vacina/<id>/` → Atualiza vacina  
+- `DELETE /api/vacina/<id>/` → Remove vacina  
 
 ### Vacinações (registro de aplicação de vacinas)
-- `GET /api/vaccinations/` → Lista todas as vacinações realizadas  
-- `POST /api/vaccinations/` → Registra uma nova vacinação (pet + vacina + data + profissional)  
-- `GET /api/vaccinations/<id>/` → Detalhes de uma vacinação específica  
-- `PUT /api/vaccinations/<id>/` → Atualiza registro de vacinação  
-- `DELETE /api/vaccinations/<id>/` → Remove registro de vacinação  
+- `GET /api/vacinacao/` → Lista todas as vacinações realizadas  
+- `POST /api/vacinacao/` → Registra uma nova vacinação (pet + vacina + data + profissional)  
+- `GET /api/vacinacao/<id>/` → Detalhes de uma vacinação específica  
+- `PUT /api/vacinacao/<id>/` → Atualiza registro de vacinação  
+- `DELETE /api/vacinacao/<id>/` → Remove registro de vacinação  
