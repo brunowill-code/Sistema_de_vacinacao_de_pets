@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'clinic.apps.ClinicConfig',
     'pets.apps.PetsConfig',
     'vaccines.apps.VaccinesConfig',
+    'accounts.apps.AccountsConfig',
     'rest_framework',
 ]
 
@@ -102,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "accounts.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
@@ -119,3 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',  # ninguém acessa sem login
+    ),
+}
