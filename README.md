@@ -85,7 +85,13 @@ Essa decisão abre caminho para transformar o sistema de uso interno em uma plat
 ## Descrição Geral das Rotas / Endpoints
 
 ### Register
-- `POST /api/register/` → Ciar novo Owner
+- `POST /api/register/` → Cria novo Owner
+
+### Login
+- `POST /api/login/` → Login do Owner
+
+### Logout
+- `POST /api/logout/` → Logout do Owner
 
 ### Clínicas
 - `POST /api/clinica/` → Cria nova clínica  
