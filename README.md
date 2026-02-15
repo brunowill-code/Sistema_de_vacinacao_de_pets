@@ -69,7 +69,7 @@ Os pets possuem:
 - Alertas de próximas vacinas
 - Histórico clínico consolidado
 
-###Tutores
+### Tutores
 
 Os tutores possuem acesso direto aos seus pets.
 A modelagem atual permite futura expansão para:
@@ -79,6 +79,7 @@ A modelagem atual permite futura expansão para:
 - Notificações de próxima vacina
 
 Essa decisão abre caminho para transformar o sistema de uso interno em uma plataforma de relacionamento com o cliente.
+
 ---
 
 ## Descrição Geral das Rotas / Endpoints
