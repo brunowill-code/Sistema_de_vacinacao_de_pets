@@ -75,5 +75,8 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 - `GET /api/vacinacao/` → Lista todas as vacinações realizadas  
 - `POST /api/vacinacao/` → Registra uma nova vacinação (pet + vacina + data + profissional)  
 - `GET /api/vacinacao/<id>/` → Detalhes de uma vacinação específica  
-- `PUT /api/vacinacao/<id>/` → Atualiza registro de vacinação  
-- `DELETE /api/vacinacao/<id>/` → Remove registro de vacinação  
+
+
+## Link da documentação Postman
+https://documenter.getpostman.com/view/45775604/2sBXcBoNcc
+
