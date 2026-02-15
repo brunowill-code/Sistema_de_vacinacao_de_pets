@@ -6,6 +6,8 @@ from vaccines.models.vacinacao_model import Vacina
 
 class VacinaSerializer(serializers.ModelSerializer):
 
+    clinica = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
         model = Vacina
         fields = [
@@ -21,6 +23,7 @@ class VacinaSerializer(serializers.ModelSerializer):
             "intervalo_doses_dias",
             "quantidade_estoque",
         ]
+        read_only_fields = ["clinica"]
 
     def validate(self, data):
         """

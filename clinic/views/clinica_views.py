@@ -1,7 +1,11 @@
+from rest_framework.exceptions import ValidationError
 from rest_framework import viewsets
+from rest_framework import status
 
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
+
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from clinic.models.clinica_model import Clinica
 from setup.permissions import IsClinicOwner
@@ -21,5 +25,12 @@ class ClinicaViewSet(viewsets.ModelViewSet):
         )
 
     def perform_create(self, serializer):
+
+        user = self.request.user
+        if Clinica.objects.filter(owner=user).exists():
+            raise ValidationError(
+                {"message": "Um owner pode possuir apenas uma clínica"}
+            )
+
         serializer.save(owner=self.request.user)
     
