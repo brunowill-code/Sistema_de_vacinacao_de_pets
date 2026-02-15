@@ -31,6 +31,55 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 - **Controle de Versão:** Git / GitHub  
 
 ---
+## Decisões de Negócio
+
+### Vacinações (Core do Sistema)
+
+Este é o núcleo do sistema, responsável pelo registro das vacinações dos pets, estabelecendo a vinculação entre o animal, a vacina aplicada e o profissional responsável pelo procedimento.
+A vacinação constitui um registro histórico e auditável, garantindo a rastreabilidade das informações clínicas. Por esse motivo:
+- Não é permitida a edição do registro após sua criação.
+- Não é permitida a exclusão de registros.
+- A integridade do histórico do pet é preservada.
+
+Essa decisão evita alterações indevidas que possam comprometer a segurança clínica, a confiabilidade dos dados e possíveis auditorias futuras.
+
+### Vacinas
+
+A entidade Vacina foi modelada com foco em:
+
+- Rastreabilidade de lotes
+- Controle de validade
+- Controle de fabricante
+- Possível expansão para gestão de estoque
+
+A modelagem já considera um cenário futuro de:
+- Controle de entrada e saída de estoque
+- Alertas de vencimento
+- Relatórios de uso por período
+
+### Pets
+
+Os pets possuem:
+
+- Histórico completo de vacinações
+- Controle de próxima dose
+- Associação direta com tutor
+- Essa estrutura permite:
+- Controle de calendário vacinal
+- Alertas de próximas vacinas
+- Histórico clínico consolidado
+
+###Tutores
+
+Os tutores possuem acesso direto aos seus pets.
+A modelagem atual permite futura expansão para:
+- Login exclusivo para tutor
+- Visualização de histórico de vacinação
+- Agendamento online
+- Notificações de próxima vacina
+
+Essa decisão abre caminho para transformar o sistema de uso interno em uma plataforma de relacionamento com o cliente.
+---
 
 ## Descrição Geral das Rotas / Endpoints
 
