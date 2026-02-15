@@ -82,6 +82,16 @@ Essa decisão abre caminho para transformar o sistema de uso interno em uma plat
 
 ---
 
+## Tecnologias Utilizadas
+
+- **Linguagem:** Python 3 
+- **Framework Web:** Django (com Django REST Framework para APIs)  
+- **Banco de Dados:** SQLite  
+- **Gerenciamento de Dependências:** pip / virtualenv  
+- **Controle de Versão:** Git / GitHub  
+
+---
+
 ## Descrição Geral das Rotas / Endpoints
 
 ### Register
