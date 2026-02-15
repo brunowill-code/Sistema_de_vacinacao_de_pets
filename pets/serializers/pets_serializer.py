@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from vaccines.serializers import VacinacaoSerializer
-from .models import Pets
+from vaccines.serializers.vacinacao_serializer import VacinacaoSerializer
+from ..models.pets_model import Pets
 
 class PetsSerializer(serializers.ModelSerializer):
     vacinacoes = VacinacaoSerializer(many=True, read_only=True)

@@ -1,6 +1,8 @@
 from django.db import models
 
-from clinic.models import Clinica, Tutor
+from clinic.models.clinica_model import Clinica
+from clinic.models.tutor_model import Tutor
+
 
 # Create your models here.
 class Pets(models.Model):

@@ -1,10 +1,11 @@
 from rest_framework import viewsets
-from .models import Pets
-from clinic.models import Tutor
+
+from clinic.models.tutor_model import Tutor
+from ..models.pets_model import Pets
 from rest_framework.permissions import IsAuthenticated
 from setup.permissions import IsClinicOwner
 
-from .serializers import PetsSerializer
+from ..serializers.pets_serializer import PetsSerializer
 # Create your views here.
 
 # rotas para os pets

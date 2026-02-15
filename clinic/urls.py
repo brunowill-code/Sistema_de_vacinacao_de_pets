@@ -1,9 +1,7 @@
 from rest_framework.routers import DefaultRouter
-from .views import (
-    ClinicaViewSet,
-    TutorViewSet,
-    ProfissionalViewSet
-)
+from .views.clinica_views import ClinicaViewSet
+from .views.tutor_views import TutorViewSet
+from .views.profissional_views import ProfissionalViewSet
 
 router = DefaultRouter()
 router.register("clinica", ClinicaViewSet, basename="clinica")

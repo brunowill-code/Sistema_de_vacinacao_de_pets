@@ -1,8 +1,7 @@
 from rest_framework.routers import DefaultRouter
-from .views import (
-    VacinaViewSet,
-    VacinacaoViewSet
-)
+from vaccines.views.vacinacao_view import VacinacaoViewSet
+
+from vaccines.views.vacina_view import VacinaViewSet
 
 router = DefaultRouter()
 router.register("vacina", VacinaViewSet, basename="vacinas")

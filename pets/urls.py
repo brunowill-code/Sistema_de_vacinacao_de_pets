@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from .views import (
+from .views.pets_view import (
     PetsViewSet
 )
 
