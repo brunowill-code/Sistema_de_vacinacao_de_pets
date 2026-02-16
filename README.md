@@ -6,7 +6,26 @@ O **Sistema de Vacinação de Pets** é uma aplicação web desenvolvida para ge
 Ele permite que **múltiplas clínicas utilizem o sistema simultaneamente**, acompanhando de forma independente o histórico de vacinação dos pets, cadastrando profissionais e vacinas, e gerenciando informações de forma segura e organizada.
 
 O sistema foi desenvolvido com foco em **facilidade de uso, modularidade e escalabilidade**, sendo uma solução prática para clínicas veterinárias de pequeno, médio e grande porte.
+
 ---
+
+## 🐳 Rodando com Docker
+Este projeto está pronto para ser executado em **containers**. Certifique-se de ter o **Docker** instalado em sua máquina.
+
+- Para criar a imagem do Docker, execute o comando abaixo na raiz do projeto:
+
+`
+docker build -t sistemadevacinacao .
+`
+
+- Após o build, você pode iniciar o sistema com o seguinte comando:
+
+`
+docker run -it --name sistemadevacinacao sistemadevacinacao
+`
+
+---
+
 ## Diagrama MER
 
 ![Diagrama MER do Sistema](assets/diagrama_mer.png)
@@ -90,23 +109,6 @@ Essa decisão abre caminho para transformar o sistema de uso interno em uma plat
 - **Banco de Dados:** SQLite  
 - **Gerenciamento de Dependências:** pip / virtualenv  
 - **Controle de Versão:** Git / GitHub  
-
----
-
-## 🐳 Rodando com Docker
-Este projeto está pronto para ser executado em containers. Certifique-se de ter o Docker instalado em sua máquina.
-
-Para criar a imagem do Docker, execute o comando abaixo na raiz do projeto:
-
-`
-docker build -t sistemadevacinacao .
-`
-
-Após o build, você pode iniciar o sistema com o seguinte comando:
-
-`
-docker run -it --name sistemadevacinacao sistemadevacinacao
-`
 
 ---
 
