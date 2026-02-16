@@ -92,6 +92,23 @@ Essa decisão abre caminho para transformar o sistema de uso interno em uma plat
 
 ---
 
+## 🐳 Rodando com Docker
+Este projeto está pronto para ser executado em containers. Certifique-se de ter o Docker instalado em sua máquina.
+
+Para criar a imagem do Docker, execute o comando abaixo na raiz do projeto:
+
+`
+docker build -t sistemadevacinacao .
+`
+
+Após o build, você pode iniciar o sistema com o seguinte comando:
+
+`
+docker run -it --name sistemadevacinacao sistemadevacinacao
+`
+
+---
+
 ## Descrição Geral das Rotas / Endpoints
 
 ### Register
