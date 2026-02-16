@@ -24,11 +24,12 @@ Esse diagrama garante que **os dados sejam consistentes e relacionados corretame
 
 ## Tecnologias Utilizadas
 
-- **Linguagem:** Python 3 
+- **Linguagem:** Python 3.12+ 
 - **Framework Web:** Django (com Django REST Framework para APIs)  
-- **Banco de Dados:** SQLite  
+- **Banco de Dados:** SQLite (Desenvolvimento)
 - **Gerenciamento de Dependências:** pip / virtualenv  
-- **Controle de Versão:** Git / GitHub  
+- **Controle de Versão:** Git / GitHub
+- **Conteinerização:** Docker
 
 ---
 ## Decisões de Negócio
